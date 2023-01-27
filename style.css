@@ -188,6 +188,23 @@ main {
 	white-space: nowrap !important;
 }
 
+.github {
+  --color: var(--color-primary-900); 
+  position: absolute;
+  right: 0; top: 0;
+  cursor: pointer;
+  &:is(
+    :hover,
+    :focus,
+    :focus-visible
+  ) .github__repo {--color: var(--color-primary-300);  }
+}
+
+.github__repo {
+  fill: var(--color);
+  transition: fill var(--transition);
+}
+
 .full-width { grid-column: 1 / -1; }
 
 @keyframes pop-in {
