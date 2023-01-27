@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark light" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;800&family=Ubuntu+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <title>Border Radius Previewer</title>
+  </head>
+  <body>
+    <main>
+      <h1 class="title">[Previewer] border-radius:</h1>
+      <form action="#" class="controls" data-js="form">
+        <label for="output" class="controls__label [ full-width ]">
+          <span class="sr-only">border radius output - activate to copy</span>
+          <input
+            class="controls__viewer"
+            data-js="viewer"
+            name="output"
+            readonly
+            type="text"
+            value="border-radius: 0 0 0 0;"
+          />
+          <button class="controls__copy" type="button" data-js="copy">
+            <span class="sr-only">copy!</span>
+            <img
+              src="/copy-icon.svg"
+              role="presentation"
+              width="20"
+              height="20"
+            />
+          </button>
+          <small class="controls__notification" role="alert"></small>
+        </label>
+        <label class="controls__label" for="topLeft">
+          <span class="text">Top Left</span>
+          <input
+            autocomplete="off"
+            class="controls__input"
+            min="0"
+            name="topLeft"
+            pattern="\d{0,}(%|px|ch|em|rem|ex|ic|)"
+            type="text"
+            value="0"
+          />
+          <small class="controls__error" role="alert"></small>
+        </label>
+        <label class="controls__label" for="topRight">
+          <span class="text">Top Right</span>
+          <input
+            autocomplete="off"
+            class="controls__input"
+            min="0"
+            name="topRight"
+            pattern="\d{0,}(%|px|ch|em|rem|ex|ic|)"
+            type="text"
+            value="0"
+          />
+          <small class="controls__error" role="alert"></small>
+        </label>
+        <label class="controls__label" for="bottomLeft">
+          <span class="text">Bottom Left</span>
+          <input
+            autocomplete="off"
+            class="controls__input"
+            min="0"
+            name="bottomLeft"
+            pattern="\d{0,}(%|px|ch|em|rem|ex|ic|)"
+            type="text"
+            value="0"
+          />
+          <small class="controls__error" role="alert"></small>
+        </label>
+        <label class="controls__label" for="bottomRight">
+          <span class="text">Bottom Right</span>
+          <input
+            autocomplete="off"
+            class="controls__input"
+            min="0"
+            name="bottomRight"
+            pattern="\d{0,}(%|px|ch|em|rem|ex|ic|)"
+            type="text"
+            value="0"
+          />
+          <small class="controls__error" role="alert"></small>
+        </label>
+        <div class="controls__output [ full-width ]" data-js="output"></div>
+      </form>
+    </main>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
